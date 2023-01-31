@@ -269,7 +269,7 @@ Take note of these two links:
 <p>
 
 
-**Congratulations on completing your osTicket Help Desk Ticketing System Installation!** 
+🎉**Congratulations on completing your osTicket Help Desk Ticketing System Installation!**🎉 
   
 
 <p align="center">

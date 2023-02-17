@@ -32,8 +32,8 @@ This tutorial outlines the prerequisites and installation of the open-source hel
 
 **Step 1:** Create a Windows 10</b> (21H2) virtual machine with 4vCPUs in your Microsoft Azure portal and connect via Remote Desktop. Do this by copying and pasting the public IP address in Remote Desktop Connection.
 <p>
-<img src="https://i.imgur.com/Nq0PrfI.png" height="50%" width="50%" alt="Disk Sanitization Steps"/>
-<img src="https://i.imgur.com/Tb97pur.png" height="50%" width="50%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/PDOtpim.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/Eq2JqGM.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
 

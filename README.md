@@ -30,20 +30,18 @@ This tutorial outlines the prerequisites and installation of the open-source hel
 
 <h2>Installation Steps</h2>
 
-**Follow the steps in the order listed as almost any error will lead to having to start over from scratch in a new virtual machine!**
-
-**Step 1:** Create a Windows 10</b> (21H2) virtual machine with 4vCPUs in your Microsoft Azure portal and connect via Remote Desktop. Do this by copy and pasting the public IP address in Remote Desktop Connection.
+**Step 1:** Create a Windows 10</b> (21H2) virtual machine with 4vCPUs in your Microsoft Azure portal and connect via Remote Desktop. Do this by copying and pasting the public IP address in Remote Desktop Connection.
 <p>
 <img src="https://i.imgur.com/Nq0PrfI.png" height="50%" width="50%" alt="Disk Sanitization Steps"/>
 <img src="https://i.imgur.com/Tb97pur.png" height="50%" width="50%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
 
-**Step 2:** Once up and running, install/enable "Internet Information Services" (IIS) in Windows with CGI: Control panel --> Programs --> Turn Windows features on or off --> check box titled "Internet Information Services" and expand --> expand "World Wide Web Services" --> expand "Application Development Features" --> check box titled "CGI".  IIS is a web server that allows your computer to serve up websites and because OsTicket runs out of a website, we need to setup and configure IIS.
+**Step 2:** Once up and running, install/enable Internet Information Services (IIS) in Windows with CGI: Go to Control Panel > Programs > Turn Windows features on or off > check box titled Internet Information Services and expand > expand World Wide Web Services > expand Application Development Features > check box titled CGI.  IIS is a web server that allows your computer to serve up websites and because OsTicket runs out of a website, we need to setup and configure IIS.
 
 <p align="center">
-<img src="https://imgur.com/Pp3YiGv.png" height="50%" width="50%" alt="osTicket Prereqs and Installation"/>
-<img src="https://i.imgur.com/dCCltnf.png" height="50%" width="50%" alt="osTicket Prereqs and Installation"/>
+<img src="https://i.imgur.com/NRE13ZF.png" height="70%" width="70%" alt="osTicket Prereqs and Installation"/>
+<img src="https://i.imgur.com/PG7fvJP.png" height="70%" width="70%" alt="osTicket Prereqs and Installation"/>
 </p>
 <p>
 
@@ -53,16 +51,16 @@ This tutorial outlines the prerequisites and installation of the open-source hel
 - Rewrite Module (rewrite_amd64_en-US.msi)
 
   
-**Step 4:** Create the directory C:\PHP.
+**Step 4:** Create the directory C:\PHP. Right-click and select a new folder.
 <p align="center">
-<img src="https://i.imgur.com/wQREDcc.png" height="50%" width="50%" alt="osTicket Prereqs and Installation"/>
+<img src="https://i.imgur.com/4HWBazz.png" height="50%" width="50%" alt="osTicket Prereqs and Installation"/>
 </p>
 <p align="center">
 
-**Step 5:** From the installation files, download and install PHP 7.3.8 (php-7.3.8-nts-Win32-VC15-x86.zip) and unzip the contents into C:\PHP. To do so, find php-7.3.8-nts-Win32-VC15-x86.zip in the Downloads folder, right-click and say extract all. You will browse to make the destination your C:\PHP folder.
+**Step 5:** From the installation files, download and install PHP 7.3.8 (php-7.3.8-nts-Win32-VC15-x86.zip) and unzip the contents into C:\PHP. To do so, find php-7.3.8-nts-Win32-VC15-x86.zip in the Downloads folder, right-click and select extract all. You will browse to make the destination your C:\PHP folder and select Extract.
 
 <p>
-<img src="https://i.imgur.com/h6Y5org.png" height="50%" width="50%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/ZgJZavg.png" height="50%" width="50%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
 

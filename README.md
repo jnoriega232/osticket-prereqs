@@ -30,14 +30,17 @@ This tutorial outlines the prerequisites and installation of the open-source hel
 
 <h2>Installation Steps</h2>
 
-**Step 1:** Create a Windows 10</b> (21H2) virtual machine with 4vCPUs in your Microsoft Azure portal and connect via Remote Desktop. Do this by copying and pasting the public IP address in Remote Desktop Connection.
+**Step 1:** Create a Windows 10 Virtual Machine (VM) with 2-4 Virtual CPUs in your Microsoft Azure portal and connect via Remote Desktop. Do this by copying and pasting the public IP address in Remote Desktop Connection.
+
 <p>
 <img src="https://i.imgur.com/PDOtpim.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
 <img src="https://i.imgur.com/Eq2JqGM.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
 
-**Step 2:** Once up and running, install/enable Internet Information Services (IIS) in Windows with CGI: Go to Control Panel > Programs > Turn Windows features on or off > check box titled Internet Information Services and expand > expand World Wide Web Services > expand Application Development Features > check box titled CGI > OK.  IIS is a web server that allows your computer to serve up websites and because OsTicket runs out of a website, we need to setup and configure IIS.
+**Step 2:** Once up and running, install/enable Internet Information Services (IIS) in Windows with CGI: Go to Control Panel > Programs > Turn Windows features on or off > check box titled "Internet Information Services" and expand > expand World Wide Web Services > expand Application Development Features > check box titled "CGI" > OK.  
+
+IIS is a web server that allows your computer to serve up websites. Since osTicket runs out of a website, we need to setup and configure IIS.
 
 <p align="center">
 <img src="https://i.imgur.com/NRE13ZF.png" height="70%" width="70%" alt="osTicket Prereqs and Installation"/>
@@ -45,19 +48,20 @@ This tutorial outlines the prerequisites and installation of the open-source hel
 </p>
 <p>
 
-We can test that our web server is working by opening a new tab in Microsoft Edge. Go to 127.0.0.1 which is the local host or loopback address and it should appear as below.
+We can test that our web server is working by opening a new tab in Microsoft Edge. Go to 127.0.0.1; the local host or loopback address. If successful, it should appear as below.
   
 <p align="center">
 <img src="https://i.imgur.com/CveyP3U.png" height="70%" width="70%" alt="osTicket Prereqs and Installation"/>
 </p>
 <p align="center">
   
-**Step 3:** Within your virtual machine using the installation files link, download and install:
+**Step 3:** Within your Virtual Machine using the installation files link, download and install:
 - PHP Manager for IIS (PHPManagerForIIS_V1.5.0.msi)
 - Rewrite Module (rewrite_amd64_en-US.msi)
 
   
-**Step 4:** Create the directory C:\PHP. Right-click and select a new folder.
+**Step 4:** Create the directory C:\PHP: Right-click and select a new folder. Label the folder "PHP".
+
 <p align="center">
 <img src="https://i.imgur.com/4HWBazz.png" height="70%" width="70%" alt="osTicket Prereqs and Installation"/>
 </p>
@@ -72,30 +76,32 @@ We can test that our web server is working by opening a new tab in Microsoft Edg
 
 **Step 6:** From the installation files, download and install VC_redist.x86.exe.
 
-**Step 7:** From the installation files, download and install MySQL 5.5.62 (mysql-5.5.62-win32.msi). Choose Setup Type: Typical. Make sure to check the box launch the MySQL Instance Configuration Wizard after install. Continue setting up > Next > Standard Configuration > check Install As Windows Service and leave Service Name MySQL. You will then need to make some credentials. For the sake of this lab, we will use the username: root and the password: Password1. Lastly, Execute.
+**Step 7:** From the installation files, download and install MySQL 5.5.62 (mysql-5.5.62-win32.msi). Choose Setup Type: Typical. Make sure to check the box launch the MySQL Instance Configuration Wizard after install. Continue setting up > Next > Standard Configuration > check Install As Windows Service and leave Service Name MySQL. 
+
+You will then need to make some credentials. For the sake of this lab, we will use the username: "root" and the password: "Password1". Lastly, Execute.
 
   
-**Step 8:** Open Internet Information Services (IIS) as an Admin > double-click PHP Manager > register PHP from within IIS by selecting Register new PHP version > browse C drive > PHP > select php-cgi.
+**Step 8:** Open Internet Information Services (IIS) as an Admin > double-click PHP Manager > register PHP from within IIS by selecting Register new PHP version > browse C drive > PHP > select "php-cgi" > OK.
 
 <p align="center">
-<img src="https://i.imgur.com/Nf7FMrv.png" height="70%" width="70%" alt="osTicket Prereqs and Installation"/>
-<img src="https://i.imgur.com/gm3nxWB.png" height="70%" width="70%" alt="osTicket Prereqs and Installation"/>
-<img src="https://i.imgur.com/Ez5f7v4.png" height="70%" width="70%" alt="osTicket Prereqs and Installation"/>
+<img src="https://i.imgur.com/CS8uDNJ.png" height="70%" width="70%" alt="osTicket Prereqs and Installation"/>
+<img src="https://i.imgur.com/SsZkhMX.png" height="70%" width="70%" alt="osTicket Prereqs and Installation"/>
+<img src="https://i.imgur.com/PQgNwu6.png" height="70%" width="70%" alt="osTicket Prereqs and Installation"/>
 </p>
 <p>
 
 Follow up with reloading IIS: Click on the server vm-osticket (vm-osticket\labuser) > select Restart
 
 <p align="center">
-<img src="https://i.imgur.com/vmupWzR.png" height="70%" width="70%" alt="osTicket Prereqs and Installation"/>
+<img src="https://i.imgur.com/qoT2lVc.png" height="70%" width="70%" alt="osTicket Prereqs and Installation"/>
 </p>
 <p>
 
-**Step 9:** Download osTicket v1.15.8 from the installation files and we need to extract and copy the upload folder to C:\inetpub\wwwroot. To do so open two separate File Explorer windows. On one go to C drive > inetpub > wwwroot. On the other File Explorer window go to Downloads > double-click osTicket-v1.15.8 > click and drag the folder upload into the wwwroot folder on the other File Explorer window we opened. Now rename the folder upload to osTicket.
+**Step 9:** Download osTicket v1.15.8.zip from the installation files. Then, we need to extract and copy the "upload" folder to C:\inetpub\wwwroot (web server's main folder). To do so open two separate File Explorer windows. On one, go to C drive > inetpub > wwwroot. On the other File Explorer window go to Downloads > double-click osTicket-v1.15.8 > click and drag the folder "upload" into the wwwroot folder on the other File Explorer window we opened. Now rename the folder "upload" to "osTicket".
   
 <p align="center">
-<img src="https://i.imgur.com/f4cXkg7.png" height="70%" width="70%" alt="osTicket Prereqs and Installation"/>
-<img src="https://i.imgur.com/E12aErK.png" height="70%" width="70%" alt="osTicket Prereqs and Installation"/>
+<img src="https://i.imgur.com/ma2L5Cp.png" height="70%" width="70%" alt="osTicket Prereqs and Installation"/>
+<img src="https://i.imgur.com/Acu4da3.png" height="70%" width="70%" alt="osTicket Prereqs and Installation"/>
 </p>
 <p>
 

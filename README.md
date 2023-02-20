@@ -30,7 +30,7 @@ This tutorial outlines the prerequisites and installation of the open-source hel
 
 <h2>Installation Steps</h2>
 
-**Step 1:** Create a Windows 10 Virtual Machine (VM) with 2-4 Virtual CPUs in your Microsoft Azure portal and connect via Remote Desktop. Do this by copying and pasting the public IP address in Remote Desktop Connection.
+**Step 1: Create an Azure Virtual Machine Windows 10, 4 vCPUs** Create a Windows 10 Virtual Machine (VM) with 2-4 Virtual CPUs in your Microsoft Azure portal and connect via Remote Desktop. Do this by copying and pasting the public IP address in Remote Desktop Connection.
 
 <p>
 <img src="https://i.imgur.com/PDOtpim.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
@@ -38,7 +38,7 @@ This tutorial outlines the prerequisites and installation of the open-source hel
 </p>
 <p>
 
-**Step 2:** Once up and running, install/enable Internet Information Services (IIS) in Windows with CGI: Go to Control Panel > Programs > Turn Windows features on or off > check box titled "Internet Information Services" and expand > expand World Wide Web Services > expand Application Development Features > check box titled "CGI" > OK.  
+**Step 2:** Once up and running, install/enable Internet Information Services (IIS) in Windows with CGI: Go to Control Panel > Programs > Turn Windows features on or off > check box for Internet Information Services and expand > expand World Wide Web Services > expand Application Development Features > check box for CGI > OK.  
 
 IIS is a web server that allows your computer to serve up websites. Since osTicket runs out of a website, we need to setup and configure IIS.
 
@@ -107,48 +107,42 @@ Follow up with reloading IIS: Click on the server vm-osticket (vm-osticket\labus
 
 Follow up with reloading IIS: Click on the server vm-osticket (vm-osticket\labuser) > select Restart.
 
-**Step 10:** Go to Sites > Default Web Site > osTicket and select Browse *:80 on the right hand side.
+**Step 10:** Go to Sites > Default Web Site > osTicket and select "Browse *:80" on the right hand side.
 
 <p align="center">
-<img src="https://i.imgur.com/iqCf28W.png" height="70%" width="70%" alt="osTicket Prereqs and Installation"/>
+<img src="https://i.imgur.com/VinKfDa.png" height="70%" width="70%" alt="osTicket Prereqs and Installation"/>
 </p>
 
 A window should open in your browser appearing as below.
 
 <p align="center">
-<img src="https://i.imgur.com/3Iuh10I.png" height="70%" width="70%" alt="osTicket Prereqs and Installation"/>
+<img src="https://i.imgur.com/rnbZqXZ.png" height="70%" width="70%" alt="osTicket Prereqs and Installation"/>
 </p>
 <p>
 
 
-**Step 11:** Go back to Internet Information Services. Go to Sites > Default > osTicket and double-click the PHP Manager icon.
+**Step 11:** Enable extensions in IIS: Note the following extensions are not enabled: *php_imap.dll*, *php_intl.dll*, and *php_opcache.dll*. 
+
+Go back to Internet Information Services. Go to Sites > Default > osTicket and double-click the PHP Manager icon. Then, select Enable or disable an extension and enable the three extensions one at a time. See example in second picture below.
 
 <p align="center">
-<img src="https://i.imgur.com/mMpZQFr.png" height="70%" width="70%" alt="osTicket Prereqs and Installation"/>
+<img src="https://i.imgur.com/86QOlUA.png" height="70%" width="70%" alt="osTicket Prereqs and Installation"/>
+<img src="https://i.imgur.com/YgjB4yO.png" height="70%" width="70%" alt="osTicket Prereqs and Installation"/>
 </p>
-<p>
-
+<p>  
   
-Then, select Enable or disable an extension and enable the three extensions one at a time: *php_imap.dll*, *php_intl.dll*, and *php_opcache.dll* if they are not already so.
+**Step 12:** Refresh the osTicket webpage and observe the changes below:
   
 <p align="center">
-<img src="https://i.imgur.com/UiRVoRw.png" height="70%" width="70%" alt="osTicket Prereqs and Installation"/>
-</p>
-<p>
-  
-  
-**Step 12:** Refresh the osTicket webpage and it should look something like below:
-  
-<p align="center">
-<img src="https://i.imgur.com/lXPDFkX.png" height="70%" width="70%" alt="osTicket Prereqs and Installation"/>
+<img src="https://i.imgur.com/7d3Us3F.png" height="70%" width="70%" alt="osTicket Prereqs and Installation"/>
 </p>
 <p>
   
   
-**Step 13:** Rename C:\inetpub\wwwroot\osTicket\include\ost-sampleconfig.php to C:\inetpub\wwwroot\osTicket\include\ost-config.php.
+**Step 13:** Rename C:\inetpub\wwwroot\osTicket\include\ost-sampleconfig.php to C:\inetpub\wwwroot\osTicket\include\ost-config.php. Notice we are removing the word "sample".
   
 <p align="center">
-<img src="https://i.imgur.com/Yb5ct3K.png" height="70%" width="70%" alt="osTicket Prereqs and Installation"/>
+<img src="https://i.imgur.com/cbHE80o.png" height="70%" width="70%" alt="osTicket Prereqs and Installation"/>
 </p>
 <p>
   

@@ -220,17 +220,17 @@ Enter username and password: *root* and *Password1* and select Open.
 </p>
 <p>
 
-Create a New Database.
+Create a New Database. On the left hand side, right-click Unamed > Create New > Database
   
 <p align="center">
-<img src="https://i.imgur.com/UjyZNno.png" height="70%" width="70%" alt="osTicket Prereqs and Installation"/>
+<img src="https://i.imgur.com/JrWVs7O.png" height="70%" width="70%" alt="osTicket Prereqs and Installation"/>
 </p>
 <p>
 
-Name it osTicket.
+Name it osTicket and select OK.
   
 <p align="center">
-<img src="https://i.imgur.com/kPHBdWx.png" height="70%" width="70%" alt="osTicket Prereqs and Installation"/>
+<img src="https://i.imgur.com/XMM2ARa.png" height="70%" width="70%" alt="osTicket Prereqs and Installation"/>
 </p>
 <p>
 
@@ -243,7 +243,7 @@ Go back to the browser and continue setting up osTicket by filling out last sect
 - MySQL Password: Password1
   
 <p align="center">
-<img src="https://i.imgur.com/MDf4OHc.png" height="70%" width="70%" alt="osTicket Prereqs and Installation"/>
+<img src="https://i.imgur.com/7GCvhgr.png" height="70%" width="70%" alt="osTicket Prereqs and Installation"/>
 </p>
 <p>
 
@@ -251,61 +251,36 @@ Go back to the browser and continue setting up osTicket by filling out last sect
 Select Install Now and you should land at the following page.
   
 <p align="center">
-<img src="https://i.imgur.com/o1ov4AR.png" height="70%" width="70%" alt="osTicket Prereqs and Installation"/>
+<img src="https://i.imgur.com/ftm2WFr.png" height="70%" width="70%" alt="osTicket Prereqs and Installation"/>
 </p>
 <p>
 
-Congratulations! You've successfully installed your own Help Desk Ticketing System!
+🎉 **Congratulations! You've successfully installed osTicket!** 🎉 
 
+**Take Note!**
 
-Take note of these two links:
-  
-<p align="center">
-<img src="https://i.imgur.com/xqOBpZL.png" height="70%" width="70%" alt="osTicket Prereqs and Installation"/>
-</p>
-<p>
-
-Your osTicket URL takes you to the End User Portal where users can create and submit tickets for assistance.
+- To create tickets as a user: http://localhost/osTicket/
+- To log in as an Admin or help desk professional: http://localhost/osTicket/scp
 
 <p align="center">
 <img src="https://i.imgur.com/ASpHU9g.png" height="70%" width="70%" alt="osTicket Prereqs and Installation"/>
-</p>
-<p>
-  
-Your Staff Control Panel takes you to the Admin / Staff Portal where you can login and start working through tickets.
-
-<p align="center">
 <img src="https://i.imgur.com/LvqGC21.png" height="70%" width="70%" alt="osTicket Prereqs and Installation"/>
 </p>
 <p>
 
+**Step 17: Clean-up** 
 
-**Now it's time to cleanup in preparation for Post-Installation Setup.** 
-
-**Step 17: Delete "setup"** 
-
-Go to C:\inetpub\wwwroot\osTicket\setup folder. Delete the folder labeled setup.
+Go to C: > inetpub > wwwroot > osTicket> setup. Delete the setup folder.
   
 <p align="center">
-<img src="https://i.imgur.com/jMpbOyO.png" height="70%" width="70%" alt="osTicket Prereqs and Installation"/>
+<img src="https://i.imgur.com/dTBf2T6.png" height="70%" width="70%" alt="osTicket Prereqs and Installation"/>
 </p>
 <p>
 
-**Final Step: Reset Permissions**
-
-Reset the permissions for *Everyone* back to read and read & execute in C:\inetpub\wwwroot\osTicket\include\ost-config.php > right-click ost-config.php > properties > Security > Advanced > select Everyone > Edit > check the boxes labeled "read" and "read & execute" only > OK > Apply > OK > OK.
+Go to C: > inetpub > wwwroot > osTicket > include. Right-click on ost-config.php > Properties > Security > Advanced > select Everyone > Edit. Set permissions to "Read & execute" and "Read" > OK > Apply > OK > OK
 
 <p align="center">
 <img src="https://i.imgur.com/9aYDI8d.png" height="70%" width="70%" alt="osTicket Prereqs and Installation"/>
-</p>
-<p>
-
-
-🎉 **Congratulations on completing your osTicket Help Desk Ticketing System Installation!** 🎉 
-  
-
-<p align="center">
-<img src="https://i.imgur.com/Clzj7Xs.png" alt="osTicket Prereqs and Installation"/>
 </p>
 <p>
 

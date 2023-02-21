@@ -280,7 +280,7 @@ Go to C: > inetpub > wwwroot > osTicket> setup. Delete the setup folder.
 Go to C: > inetpub > wwwroot > osTicket > include. Right-click on ost-config.php > Properties > Security > Advanced > select Everyone > Edit. Set permissions to "Read & execute" and "Read" > OK > Apply > OK > OK
 
 <p align="center">
-<img src="https://i.imgur.com/9aYDI8d.png" height="70%" width="70%" alt="osTicket Prereqs and Installation"/>
+<img src="https://i.imgur.com/YUTMtrv.png" height="70%" width="70%" alt="osTicket Prereqs and Installation"/>
 </p>
 <p>
 

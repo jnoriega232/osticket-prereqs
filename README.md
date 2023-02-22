@@ -32,9 +32,10 @@ This tutorial outlines the prerequisites and installation of the open-source hel
 
 <h3>Open the installation files link provided in a separate tab as we will be using these files to download osTicket and some of the dependencies.</h3>
 
-<h3>Step 1: Create an Azure Virtual Machine Windows 10, 4 vCPUs<h/3>
 
-If you don't know how to create an Azure Virtual Machine, see my tutorial [here](https://github.com/jnoriega232/azure-virtualmachine)
+<h3>Step 1: Create an Azure Virtual Machine Windows 10, 4 vCPUs</h3>
+
+If you need help creating a virtual machine in Azure see my tutorial [here](https://github.com/jnoriega232/azure-virtualmachine).
 
 <h3>Step 2: Install/Enable Internet Information Services (IIS) in Windows with CGI</h3>
 

@@ -153,7 +153,7 @@ Refresh the osTicket webpage and observe the changes below:
 </p>
 <p>
   
-<h3>Step 12:Rename</h3>
+<h3>Step 12: Rename</h3>
 
 In the File Explorer window, go to Windows (C:) > inetpub > wwwroot > osTicket > include and Rename "ost-sampleconfig.php" to "ost-config.php". Notice we are removing the word "sample".
   
